@@ -1,19 +1,12 @@
-# Final Project
-
-**openvslam**
+# Customized Openvslam for IR and RGB images
 
 ## Requirements for OpenVSLAM
 
-Eigen : version 3.3.0 or later.
-
-g2o : Please use the latest release. Tested on commit ID 9b41a4e.
-
-SuiteSparse : Required by g2o.
-
-DBoW2 : Please use the custom version of DBoW2 released in https://github.com/shinsumicco/DBoW2.
-
-yaml-cpp : version 0.6.0 or later.
-
+Eigen : version 3.3.0 or later.  
+g2o : Please use the latest release. Tested on commit ID 9b41a4e.  
+SuiteSparse : Required by g2o.  
+DBoW2 : Please use the custom version of DBoW2 released in https://github.com/shinsumicco/DBoW2.  
+yaml-cpp : version 0.6.0 or later.  
 OpenCV : version 3.3.1 or later.
 
 ## Installation
