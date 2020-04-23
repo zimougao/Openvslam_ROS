@@ -1,6 +1,6 @@
 # Customized Openvslam for IR and RGB images
 
-** Refered from openvslam:   
+**Refered from openvslam:   
 https://github.com/xdspacelab/openvslam   
 https://openvslam.readthedocs.io/en/master/installation.html**
 
