@@ -1,5 +1,9 @@
 # Customized Openvslam for IR and RGB images
 
+** Refered from openvslam:   
+https://github.com/xdspacelab/openvslam   
+https://openvslam.readthedocs.io/en/master/installation.html**
+
 ## Requirements for OpenVSLAM
 
 Eigen : version 3.3.0 or later.  
@@ -36,8 +40,8 @@ sudo ldconfig -v
 
 ## Download Repo
 
-Download my repo from 
-*https://gitlab.com/go_zm/eece5554_roboticssensing/-/tree/master/Final_project*
+Download my repo from  
+https://gitlab.com/go_zm/eece5554_roboticssensing/-/tree/master/Final_project
 
 Go to your workspace
 ```bash
@@ -220,5 +224,3 @@ Run ROS Openvslam for Localization
 rosrun openvslam run_localization   -v /path/to/openvslam/demo/orb_vocab.dbow2   -c /path/to/openvslam/demo/config.yaml   --map-db map.msg --frame-skip 3 --no-sleep --auto-term --map-db map.msg
 ```
 
-
-# Openvslam_ROS
