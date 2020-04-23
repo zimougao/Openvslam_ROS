@@ -1,0 +1,43 @@
+# FLIR ADK KIT IR camera
+
+#==============#
+# Camera Model #
+#==============#
+
+Camera.name: "FLIR ADK KIT IR camera"
+Camera.setup: "monocular"
+Camera.model: "perspective"
+
+Camera.fx: 5.24888150200348832e+02
+Camera.fy: 5.21776791343664968e+02
+Camera.cx: 3.25596989785447420e+02
+Camera.cy: 2.42392342491041603e+02
+
+Camera.k1: -4.70302508060718438e-01
+Camera.k2: 3.01057860458473880e-01
+Camera.p1: 4.68835914496582538e-03
+Camera.p2: 1.65573977268025185e-03
+Camera.k3: 0
+
+
+Camera.fps: 60.0
+Camera.cols: 640
+Camera.rows: 512
+
+Camera.color_order: "RGB"
+
+#================#
+# ORB Parameters #
+#================#
+
+Feature.max_num_keypoints: 4000
+Feature.scale_factor: 1.2
+Feature.num_levels: 8
+Feature.ini_fast_threshold: 20
+Feature.min_fast_threshold: 7
+
+#========================#
+# Initializer Parameters #
+#========================#
+
+Initializer.scaling_factor: 5.0
