@@ -41,11 +41,9 @@ sudo ldconfig -v
 
 ## Download Repo
 
-Download my repo from  
-https://gitlab.com/go_zm/eece5554_roboticssensing/-/tree/master/Final_project
-
-Go to your workspace
+Download my repo and go to your workspace
 ```bash
+git clone https://github.com/zimougao/Openvslam_ROS
 cd /path/to/Final_project/
 ```
 
