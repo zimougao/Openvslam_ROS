@@ -37,6 +37,7 @@ make -j2
 sudo make install
 sudo ln -s /usr/lib64/libGLEW.so.2.1 /usr/lib/libGLEW.so.2.1
 sudo ldconfig -v
+```
 
 ## Download Repo
 
