@@ -43,7 +43,7 @@ sudo ldconfig -v
 
 Download my repo and go to your workspace
 ```bash
-git clone https://github.com/zimougao/Openvslam_ROS
+git clone https://github.com/zimougao/Openvslam_ROS.git
 cd /path/to/Final_project/
 ```
 
