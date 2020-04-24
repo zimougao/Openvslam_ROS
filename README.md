@@ -32,7 +32,8 @@ sudo apt-get install libgl1-mesa-dev sudo apt-get install libglu1-mesa-dev
 sudo apt-get install freeglut3-dev
 sudo apt-get install doxygen
 wget https://nchc.dl.sourceforge.net/project/glew/glew/2.1.0/glew-2.1.0.tgz --no-check-certificate
-tar -xzvf glew-2.1.0.tgz cd glew-2.1.0/
+tar -xzvf glew-2.1.0.tgz 
+cd glew-2.1.0/
 make -j2
 sudo make install
 sudo ln -s /usr/lib64/libGLEW.so.2.1 /usr/lib/libGLEW.so.2.1
