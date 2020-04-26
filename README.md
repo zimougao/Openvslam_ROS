@@ -1,8 +1,10 @@
 # Customized Openvslam for IR and RGB images
 
-**Referenced openvslam:   
+Tested in Ubuntu 18.04 ROS Melodic. 
+
+**Refered from openvslam:**   
 https://github.com/xdspacelab/openvslam   
-https://openvslam.readthedocs.io/en/master/installation.html**
+https://openvslam.readthedocs.io/en/master/installation.html
 
 ## Requirements for OpenVSLAM
 
@@ -51,14 +53,14 @@ cd /path/to/Final_project/
 ## Eigen Installation
 
 ```bash
-cd eigen
-mkdir build && cd build
+cd eigen-eigen-5a0156e40feb
+mkdir -p build && cd build
 cmake \
-    -DCMAKE_BUILD_TYPE=Release \
-    -DCMAKE_INSTALL_PREFIX=/usr/local \
-    ..
+    -DCMAKE_BUILD_TYPE=Release \
+    -DCMAKE_INSTALL_PREFIX=/usr/local \
+    ..
 make -j2
-sudo make install
+make install
 sudo ldconfig -v
 ```
 
@@ -117,7 +119,7 @@ cmake \
     -DCMAKE_BUILD_TYPE=Release \
     -DCMAKE_INSTALL_PREFIX=/usr/local \
     ..
-make -j2
+make -j
 sudo make install
 sudo ldconfig -v
 ```
@@ -158,7 +160,7 @@ git submodule init
 git submodule update
 mkdir build && cd build
 cmake \
-    -DBUILD_WITH_MARCH_NATIVE=OFF \
+    -DBUILD_WITH_MARCH_NATIVE=ON \
     -DUSE_PANGOLIN_VIEWER=ON \
     -DUSE_STACK_TRACE_LOGGER=ON \
     -DBOW_FRAMEWORK=DBoW2 \
@@ -168,12 +170,29 @@ cmake \
 make -j2
 ```
 
+## Test OpenVSLAM 
+
+run tracking and mapping
+```bash
+cd /path/to/openvslam/build/
+./run_video_slam -v ../demo/orb_vocab.dbow2 -m ../demo/test/video_slam.mp4 -c ../demo/test/config.yaml --frame-skip 3 --no-sleep --map-db map.msg
+```
+
+run localization
+```bash
+cd /path/to/openvslam/build/
+./run_video_slam -v ../demo/orb_vocab.dbow2 -m ../demo/test/video_localization.mp4 -c ../demo/test/config.yaml --frame-skip 3 --no-sleep --map-db map.msg
+```
+
+**If OpenVSLAM terminates abnormaly, rebuild g2o and OpenVSLAM with -DBUILD_WITH_MARCH_NATIVE=OFF option for cmake configulation.**
+
+
 ## ROS Version Installation
 
 Install the dependencies via apt.
 ```bash
-apt update -y
-apt install ros-${ROS_DISTRO}-image-transport
+sudo apt update -y
+sudo apt install ros-${ROS_DISTRO}-image-transport
 ```
 
 Download the source of cv_bridge.
@@ -223,4 +242,3 @@ Run ROS Openvslam for Localization
 ```bash
 rosrun openvslam run_localization   -v /path/to/openvslam/demo/orb_vocab.dbow2   -c /path/to/openvslam/demo/config.yaml   --map-db map.msg --frame-skip 3 --no-sleep --auto-term --map-db map.msg
 ```
-
