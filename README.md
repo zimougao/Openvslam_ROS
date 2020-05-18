@@ -2,7 +2,7 @@
 
 Tested in Ubuntu 18.04 ROS Melodic. 
 
-**Refered from openvslam:**   
+**Referred from openvslam:**   
 https://github.com/xdspacelab/openvslam   
 https://openvslam.readthedocs.io/en/master/installation.html
 
